@@ -4,26 +4,45 @@
 if [ ! -d "./retroshare" ]; then
   sudo apt install git
 #  sudo apt install ibglib2.0-dev
+  
+  # QT
+  sudo apt install qt5-qmake
+  sudo apt install qtbase5-dev
+  sudo apt install qtbase5-dev-tools
+  sudo apt install qtchooser
+  sudo apt install qtmultimedia5-dev
+  sudo apt install qttools5-dev
+  sudo apt install libqt5x11extras5-dev
+
+  # LIBS  
+
+  sudo apt install libbz2-dev
   sudo apt install libupnp-dev
+  sudo apt install rapidjson-dev
   sudo apt install doxygen
-  sudo apt install qt5-default
-  sudo apt install libxss-dev 
-  sudo apt install libspeex-dev
   sudo apt install libssl-dev
-  sudo apt install libspeexdsp-dev libxslt1-dev cmake libcurl4-openssl-dev libopencv-dev tcl8.6 libsqlcipher-dev libmicrohttpd-dev
-  sudo apt install libavcodec-dev qtmultimedia5-dev qttools5-dev libqt5x11extras5-dev qt5-default libqt5x11extras5-dev qtmultimedia5-dev qttools5-dev
+  sudo apt install libspeex-dev  
+  sudo apt install libspeexdsp-dev
+  sudo apt install libxslt1-dev
+  sudo apt install cmake
+  sudo apt install libcurl4-openssl-dev
+  sudo apt install libopencv-dev
+  sudo apt install tcl8.6
+  sudo apt install libsqlcipher-dev
+  sudo apt install libmicrohttpd-dev
+  sudo apt install libavcodec-dev 
   sudo apt install libxss-dev
   sudo apt install libxapian-dev
-  sudo apt install libbz2-dev
-  sudo apt libupnp-dev
-  sudo apt install rapidjson-dev
-  
+    
   mkdir ./retroshare
   cd ./retroshare
  git clone https://github.com/RetroShare/RetroShare.git master
  # git clone https://github.com/felisucoibi/RetroShare.git master
-  rm -r ./master/supportlibs/restbed
+
+  #retroshare/master/supportlibs/restbed
   cd ..
+  sudo rm -r ./retroshare/master/supportlibs/restbed
+  
 fi
 
 cd ./retroshare/master
